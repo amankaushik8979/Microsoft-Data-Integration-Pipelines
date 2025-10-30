@@ -1,0 +1,9 @@
+{
+	"name": "labs123factory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e431a9a7-9d51-4c1d-8c12-cae114b08589",
+		"tenantId": "995709b8-e45a-4520-ae76-a01b00a02a51"
+	}
+}
