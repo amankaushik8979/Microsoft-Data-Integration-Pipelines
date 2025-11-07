@@ -13,7 +13,14 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "filter1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          age as double,",
@@ -24,7 +31,16 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     format: 'parquet') ~> srcCleanedParquet"
+				"     format: 'parquet') ~> srcCleanedParquet",
+				"srcCleanedParquet select(mapColumn(",
+				"          age,",
+				"          city,",
+				"          id,",
+				"          name",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 filter(age>25) ~> filter1"
 			]
 		}
 	}
