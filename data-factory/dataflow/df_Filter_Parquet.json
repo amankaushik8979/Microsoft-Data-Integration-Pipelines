@@ -40,7 +40,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 filter(age>25) ~> filter1"
+				"srcCleanedParquet filter(age>25) ~> filter1"
 			]
 		}
 	}
