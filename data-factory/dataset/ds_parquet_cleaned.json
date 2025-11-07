@@ -1,0 +1,37 @@
+{
+	"name": "ds_parquet_cleaned",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "df_filter_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "cleaned_data_parquet",
+				"container": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "age",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "city",
+				"type": "UTF8"
+			},
+			{
+				"name": "id",
+				"type": "INT32"
+			},
+			{
+				"name": "name",
+				"type": "UTF8"
+			}
+		]
+	}
+}
