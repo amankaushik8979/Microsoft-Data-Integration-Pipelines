@@ -1,0 +1,46 @@
+{
+	"name": "Meta_data_set",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Metadata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "jsons"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"language": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string"
+				},
+				"bio": {
+					"type": "string"
+				},
+				"version": {
+					"type": "number"
+				},
+				"fruit": {
+					"type": "string"
+				},
+				"size": {
+					"type": "string"
+				},
+				"color": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
