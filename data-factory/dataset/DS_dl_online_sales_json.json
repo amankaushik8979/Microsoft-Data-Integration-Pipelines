@@ -1,0 +1,18 @@
+{
+	"name": "DS_dl_online_sales_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls_data_eng_dl",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "output"
+			}
+		},
+		"schema": {}
+	}
+}

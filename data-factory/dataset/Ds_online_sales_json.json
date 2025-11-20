@@ -1,0 +1,41 @@
+{
+	"name": "Ds_online_sales_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_abs_webstore",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "webstore"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "salesData.json",
+				"container": "sales"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"language": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string"
+				},
+				"bio": {
+					"type": "string"
+				},
+				"version": {
+					"type": "number"
+				}
+			}
+		}
+	}
+}
