@@ -1,0 +1,12 @@
+{
+	"name": "RestAPI_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestAPI_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
